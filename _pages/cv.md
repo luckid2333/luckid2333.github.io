@@ -19,15 +19,15 @@ Education
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Testing University
-  * Duties included: Running Tests
-  * Supervisor: Professor Travis
-
-* Fall 2015: Research Assistant
-  * Testing University
-  * Duties included: Running Tests
-  * Supervisor: Professor Travis
+* 2017 - 2018: Research Assistant
+  * Shanghai University of Finance and Economics
+  * Duties included: Programming and Running Experiment
+  * Supervisor: Simin He, Bin Miao, Kang Rong
+ 
+  
+Interested Topics
+====== 
+  Taste-based Discrimination; Reciprocity and Fairness; Group Identity; Information and Subject Learning; Social Network
   
 Skills
 ======
