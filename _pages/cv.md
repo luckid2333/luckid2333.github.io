@@ -11,9 +11,11 @@ redirect_from:
 
 Education
 ======
-* B.S. in Testing Science, Testing University, 2012
-* M.S. in Testonomy, Testing University, 2014
-* Ph.D in Testology, Testing University, 2017 (expected)
+* B.S. in Economics, Huazhong University of Science and Technology, Wuhan, China, 2015
+* M.A. in Economics, Shanghai University of Finance and Economics, Shanghai, China, 2017
+* Research Master in Economics, Tilburg University, Tilburg, Netherlands, 2019
+* Ph.D in Economics, Tilburg University, Tilburg, Netherlands, 2023 (expected)
+
 
 Work experience
 ======
@@ -29,12 +31,14 @@ Work experience
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Skill Lab Experiment Programming by ztree
+* Skill Data Analysis
+  * Sub-skill Stata
+  * Sub-skill MATLAB
+  * Sub-skill R
+* Skill C++
+* Skill LaTex
+
 
 Publications
 ======
@@ -48,9 +52,9 @@ Talks
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
-Teaching
-======
-  <ul>{% for post in site.teaching %}
+# Teaching
+# ======
+#  <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
