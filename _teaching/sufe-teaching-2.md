@@ -5,6 +5,9 @@ permalink: /teaching/sufe-teaching-2
 location: "City, Country"
 ---
 
+
+
+
 Econometrics for undergraduates (Spring 2016-2017) Lecturer: Cong Li
 
 Microeconomics Topics for graduates (Spring 2016-2017) Lecturers: Quan Wen, Qianfeng Tang, Yongchao Zhang 
@@ -21,11 +24,4 @@ Labor Economics for graduates (Fall 2017-2018) Lecturer: Eric Mak
 
 International Economics for undergraduates (Fall 2017-2018) Lecturer: Yuanyuan Chen
 
-Heading 1
-======
 
-Heading 2
-======
-
-Heading 3
-======
