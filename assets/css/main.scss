@@ -45,21 +45,3 @@
 ;
 
 
-/* Align Navigation Tabs to the Right */
-.masthead__menu-links {
-  float: right !important; /* Older support */
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.masthead__inner-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Ensure the site title stays on the left while links move right */
-.site-title {
-  margin-right: auto;
-}
