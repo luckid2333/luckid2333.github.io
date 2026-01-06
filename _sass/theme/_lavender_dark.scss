@@ -1,0 +1,89 @@
+/* ==========================================================================
+   LAVENDER THEME - MODERN DARK VERSION
+   ========================================================================== */
+
+/* Core Branding - Slightly more vibrant for dark backgrounds */
+$primary-color:             #B19CD9; // Lighter lavender for contrast
+$background:                #1A1621; // Deep midnight purple-gray
+$background-offset:         #241E2E; // Lighter tier for cards/code
+$text:                      #E2E2E9; // Off-white with a hint of blue
+$text-muted:                #A099AD; // Soft gray-purple
+
+/* Lavender Color Scaling */
+$dark-primary-color:        #967BB6;
+$light-primary-color:       #D1C4E9;
+$lighter-primary-color:     rgba($primary-color, 0.1);
+
+/* Functional Colors */
+$link:                      $primary-color;
+$link-hover:                lighten($primary-color, 10%);
+$border:                    rgba(255, 255, 255, 0.1);
+$footer-bg:                 #120F17; // Darkest shade for footer
+
+/* Dark Mode Alert Colors - desaturated for dark backgrounds */
+$danger-color:              #CF6679;
+$info-color:                #80CBC4;
+$success-color:             #A5D6A7;
+$warning-color:             #FFE082;
+
+/* Modern UI Enhancements */
+$border-radius:             12px;
+$box-shadow:                0 10px 30px rgba(0, 0, 0, 0.5);
+$global-transition:         all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+/* Dark theme mapping */
+:root {
+    --global-base-color:                #{$primary-color};
+    --global-bg-color:                  #{$background};
+    --global-footer-bg-color:           #{$footer-bg};
+    --global-border-color:              #{$border};
+    
+    /* Code blocks: Deep background with lavender tint */
+    --global-code-background-color:     #{$background-offset};
+    --global-code-text-color:           #{$light-primary-color};
+    
+    /* Typography */
+    --global-text-color:                #{$text};
+    --global-text-color-light:          #{$text-muted};
+    --global-link-color:                #{$link};
+    --global-link-color-hover:          #{$link-hover};
+    
+    /* Masthead */
+    --global-masthead-link-color:       #{$text};
+    --global-masthead-link-color-hover: #{$primary-color};
+}
+
+/* Specific Dark Mode Overrides */
+.page__footer {
+    border-top: 1px solid $border;
+    background-color: $footer-bg;
+    color: $text-muted;
+}
+
+.archive__item {
+    background: $background-offset;
+    border: 1px solid transparent;
+    transition: $global-transition;
+
+    &:hover {
+        border-color: rgba($primary-color, 0.4);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Make images slightly less bright in dark mode */
+img {
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+    
+    &:hover {
+        filter: brightness(1);
+    }
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: transparent;
+    border-right: 1px solid $border;
+}
