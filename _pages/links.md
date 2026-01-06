@@ -5,7 +5,11 @@ permalink: /links/
 author_profile: true
 
 ---
-
+<style>
+  .page__title {
+    display: none !important;
+  }
+</style>
 
 [Center for Behavioral Institutional Design (C-BID)](https://cbid.org/)
 
