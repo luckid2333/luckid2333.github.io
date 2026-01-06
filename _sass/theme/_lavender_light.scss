@@ -1,0 +1,92 @@
+/* ==========================================================================
+   LAVENDER THEME - MODERN LIGHT VERSION
+   ========================================================================== */
+
+/* Core Branding */
+$primary-color:             #967BB6;
+$background:                #FBFBFF; // Soft cool-white
+$text:                      #2D2D2D;
+$text-muted:                #545454; // Slightly lighter for secondary text
+
+/* Lavender Color Scaling */
+$dark-primary-color:        darken($primary-color, 15%);
+$light-primary-color:       lighten($primary-color, 15%);
+$lighter-primary-color:     mix(#fff, $primary-color, 90%);
+
+/* Functional Colors */
+$link:                      $primary-color;
+$link-hover:                $dark-primary-color;
+$border:                    rgba($primary-color, 0.15%); // Contextual border color
+$footer-bg:                 mix(#000, $primary-color, 75%); // Elegant dark-lavender footer
+
+/* Alert Colors - Adjusted to complement Lavender */
+$danger-color:              #E57373;
+$info-color:                #64B5F6;
+$success-color:             #81C784;
+$warning-color:             #FFD54F;
+
+/* Modern UI Enhancements */
+$border-radius:             12px; // Slightly rounder for a modern feel
+$box-shadow:                0 4px 20px rgba(150, 123, 182, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
+$global-transition:         all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+
+:root {
+    --global-base-color:                #{$primary-color};
+    --global-bg-color:                  #{$background};
+    --global-footer-bg-color:           #{$footer-bg};
+    --global-border-color:              #{$border};
+    
+    /* Code blocks: Use a very subtle lavender tint for the background */
+    --global-code-background-color:     #{$lighter-primary-color};
+    --global-code-text-color:           #{$dark-primary-color};
+    
+    /* Typography */
+    --global-text-color:                #{$text};
+    --global-text-color-light:          #{$text-muted};
+    --global-link-color:                #{$link};
+    --global-link-color-hover:          #{$link-hover};
+    
+    /* Masthead */
+    --global-masthead-link-color:       #{$text};
+    --global-masthead-link-color-hover: #{$primary-color};
+}
+
+/* Smooth profile picture and shadow */
+.author__avatar {
+    border: 3px solid #fff;
+    box-shadow: $box-shadow;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+/* Make social icons subtle until hovered */
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+/* Improve Card appearance (Posts/Publications) */
+.grid__item {
+    .archive__item {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        border: 1px solid transparent;
+        transition: $global-transition;
+
+        &:hover {
+            border-color: $primary-color;
+            transform: translateY(-4px);
+        }
+    }
+}
