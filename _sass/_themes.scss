@@ -39,9 +39,16 @@ $type-size-6                : 0.75em;   // ~12px
 $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
 
-$global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
-$caption-font-family        : $serif;
+/* Stylish Google Fonts (Ensure these are imported in head.html) */
+$lora: 'Lora', Georgia, serif;
+$playfair: 'Playfair Display', serif;
+$inter: 'Inter', system-ui, sans-serif;
+
+/* Redefine Global Assignments */
+$global-font-family: $lora;         /* Elegant body text */
+$header-font-family: $playfair;     /* Stylish, bold headers */
+$sans-serif:         $inter;        /* Modern UI/Buttons */
+$sans-serif-narrow:  $inter;
 
 /* ==========================================================================
    Breakpoints
