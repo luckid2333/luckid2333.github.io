@@ -3,7 +3,7 @@ title: "Ethnic Salience and Discrimination"
 collection: research
 category: "working-paper"
 permalink: /research/wp1
-author:
+author: with Zahra Murad, Emel Öztürk, Sigrid Suetens
 date: 2025-12-01
 slidesurl: #
 paperurl: 'https://cepr.org/publications/dp18866'
@@ -11,7 +11,7 @@ bibtexurl: #
 citation: #
 ---
 
-with Zahra Murad, Emel Öztürk , Sigrid Suetens, pre-registered as [here](https://osf.io/7f843)
+Pre-registered as [here](https://osf.io/7f843)
 
 
 We report the results of three controlled experiments in which participants belonging to an ethnic majority group made choices that affected the payoff of another (``vulnerable'') participant who was either a member of the majority group or an ethnic minority group. 
