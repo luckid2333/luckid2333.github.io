@@ -7,6 +7,8 @@ redirect_from:
   - /about.html
 ---
 
+
+
 I am a postdoctoral associate at the Center for Behavioral Institutional Design (C-BID), at New York University Abu Dhabi. I received my PhD in Economics at Tilburg University in November 2024.  
 
 
