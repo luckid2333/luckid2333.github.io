@@ -1,11 +1,8 @@
 /* ==========================================================================
-   NAVIGATION
+   NAVIGATION - LAVENDER THEME (NO DROPDOWN)
    ========================================================================== */
 
-/*
-   Breadcrumb navigation links
-   ========================================================================== */
-
+/* Breadcrumb navigation links */
 .breadcrumbs {
   @include container;
   @include clearfix;
@@ -14,10 +11,8 @@
   padding-left: 2em;
   padding-right: 2em;
   font-family: $sans-serif;
-  -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
-  -webkit-animation-delay: 0.30s;
-          animation-delay: 0.30s;
+  animation: intro 0.3s both;
+  animation-delay: 0.30s;
 
   @include breakpoint($large) {
     padding-left: 1em;
@@ -51,11 +46,7 @@
   }
 }
 
-
-/*
-   Post pagination navigation links
-   ========================================================================== */
-
+/* Post pagination navigation links */
 .pagination {
   @include full();
   @include clearfix();
@@ -103,24 +94,17 @@
       }
     }
 
-    &:first-child {
-      margin-left: 0;
-
-      a {
-        border-top-left-radius: $border-radius;
-        border-bottom-left-radius: $border-radius;
-      }
+    &:first-child a {
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
     }
 
-    &:last-child {
-      a {
-        border-top-right-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
-      }
+    &:last-child a {
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
     }
   }
 
-  /* next/previous buttons */
   &--pager {
     display: block;
     padding: 1em 2em;
@@ -149,203 +133,125 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
-
-    &.disabled {
-      color: var(--global-text-color-light);
-      pointer-events: none;
-      cursor: not-allowed;
-    }
   }
 }
 
-.page__content + .pagination,
-.page__meta + .pagination,
-.page__share + .pagination,
-.page__comments + .pagination {
-  margin-top: 2em;
-  padding-top: 2em;
-  border-top: 1px solid var(--global-border-color);
-}
-
-
-/*
-   Priority plus navigation
-   ========================================================================== */
-
+/* Priority plus navigation overrides */
 .greedy-nav {
   position: relative;
-  min-width: 250px;
-  background: var(--global-bg-color);
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: var(--global-bg-color);
+  overflow: visible;
 
-  a {
-    display: block;
-    margin: 0 1rem;
-    padding: 0.5rem 0;
-    color: var(--global-masthead-link-color);
-    text-decoration: none;
-
-    &:hover {
-      color: var(--global-masthead-link-color-hover);
-    }
-  }
-
+  /* Hide the dropdown button entirely */
   button {
-    position: absolute;
-    height: 2.5rem;
-    right: 0;
-    padding: 0 0.5rem;
-    border: 0;
-    outline: none;
-    background-color: var(--global-bg-color);
-    color: var(--global-text-color);
-    cursor: pointer;
-    z-index: 100;
+    display: none !important;
   }
 
   .visible-links {
-    display: flex; 
+    display: flex;
     flex: 1;
-    justify-content: flex-end; /* Pushes links to the right */
-    list-style: none; /* In case it's inherited */
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
     margin: 0;
+    padding: 0;
 
     li {
-      display: block; 
-      vertical-align: middle;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
 
       &:first-child {
         font-weight: bold;
-        margin-right: auto;
-
+        margin-right: auto; /* Pushes other links to the right */
+        
         a {
           margin-left: 0;
         }
       }
+    }
 
-      &:last-child {
-        a {
-          margin-right: 0;
+    /* Style for the Theme Toggle */
+    #theme-toggle {
+      margin-left: 1.5rem;
+      
+      a {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        
+        &:before {
+          display: none; /* No underline for the icon */
+        }
+        
+        i, .svg-inline--fa {
+          font-size: 1.1rem;
+          color: var(--global-text-color);
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        &:hover i {
+          color: var(--global-base-color);
+          transform: rotate(15deg);
         }
       }
     }
 
-    #theme-toggle {
-      a {
-        width: 25px;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-      }
-    }
-
+    /* Standard Links with Lavender Underline */
     a {
+      display: block;
+      margin: 0 1rem;
+      padding: 0.5rem 0;
+      color: var(--global-masthead-link-color);
+      text-decoration: none;
       position: relative;
+      white-space: nowrap;
+
+      &:hover {
+        color: var(--global-masthead-link-color-hover);
+      }
 
       &:before {
-         content: "";
-         position: absolute;
-         left: 0;
-         bottom: 0;
-         height: 3px; 
-         background: var(--global-base-color); 
-         width: 100%;
-         transition: transform 0.3s ease; 
-         transform: scaleX(0);
-         transform-origin: right; 
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        background: var(--global-base-color);
+        width: 100%;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: right;
       }
 
       &:hover:before {
-         transform: scaleX(1);
-         transform-origin: left; 
+        transform: scaleX(1);
+        transform-origin: left;
       }
     }
   }
 
   .hidden-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 15px;
-    padding: 5px;
-    border: 1px solid var(--global-border-color);
-    border-radius: $border-radius;
-    background: var(--global-bg-color);
-    box-shadow: 0 0 10px rgba(#000, 0.25);
-
-    a {
-      margin: 0;
-      padding: 10px 20px;
-      font-size: $type-size-5;
-
-      &:hover {
-        color: var(--global-masthead-link-color-hover);
-        background: var(--global-border-color);
-      }
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: -11px;
-      right: 10px;
-      width: 0;
-      border-style: solid;
-      border-width: 0 10px 10px;
-      border-color: var(--global-border-color) transparent;
-      display: block;
-      z-index: 0;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: -10px;
-      right: 10px;
-      width: 0;
-      border-style: solid;
-      border-width: 0 10px 10px;
-      border-color: var(--global-bg-color) transparent;
-      display: block;
-      z-index: 1;
-    }
-
-    li {
-      display: block;
-      border-bottom: 1px solid var(--global-border-color);
-
-      &:last-child {
-        border-bottom: none;
-      }
-    }
+    display: none !important;
   }
 }
 
-
-/*
-   Navigation list
-   ========================================================================== */
-
+/* Navigation list (Sidebar) */
 .nav__list {
   font-size: 1.25rem;
-
-  ul {
-    margin-bottom: 1em;
-  }
-
+  ul { margin-bottom: 1em; }
   a {
     display: block;
     padding: 0.125em 0;
     color: inherit;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    &:hover { text-decoration: underline; }
   }
-
   .active {
     margin-left: -0.5em;
     padding-left: 0.5em;
@@ -354,96 +260,24 @@
     font-weight: bold;
     background: var(--global-base-color);
     border-radius: $border-radius;
-
-    &:hover {
-      color: #fff;
-    }
+    &:hover { color: #fff; }
   }
 }
 
-.nav__title {
-  margin: 0;
-  padding: 0.5rem 1rem;
-  font-family: $sans-serif-narrow;
-  font-size: $type-size-5;
-  font-weight: bold;
-}
-
-.nav__sub-title {
-  display: block;
-  margin: 0.5rem 0;
-  padding: 0.5rem 0;
-  font-family: $sans-serif-narrow;
-  font-size: $type-size-6;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--global-border-color);
-}
-
-
-/*
-   Table of contents navigation
-   ========================================================================== */
-
+/* TOC Styling */
 .toc {
   font-family: $sans-serif-narrow;
   color: var(--global-text-color-light);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  background-color: #fff;
+  background-color: var(--global-bg-color);
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 
   .nav__title {
     color: #fff;
-    font-size: $type-size-6;
     background: var(--global-base-color);
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
-  }
-}
-
-.toc__menu {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  list-style: none;
-  font-size: 0.8rem;
-
-  a {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: var(--global-code-text-color);
-    font-size: $type-size-7;
-    font-weight: bold;
-    line-height: 1.5;
-    border-bottom: 1px solid var(--global-border-color);
-    text-decoration-line: none !important;
-
-    &:hover {
-      color: #000;
-      background: var(--global-link-color-hover);
-    }
-  }
-
-  > li:last-child {
-    a {
-      border-bottom: none;
-    }
-  }
-
-  li ul > li a {
-    padding-left: 2rem;
-    font-weight: normal;
-  }
-
-  /* hide sub sub links on small screens*/
-  li > ul li {
-    display: none;
-
-    @include breakpoint($medium) {
-      display: block;
-    }
   }
 }
