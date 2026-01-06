@@ -3,7 +3,7 @@ title: "Other-regarding Ethnic Preferences"
 collection: research
 category: "working-paper"
 permalink: /research/wp3
-author:
+author: with Sigrid Suetens
 date: 2025-12-01
 slidesurl: #
 paperurl: #
@@ -11,7 +11,7 @@ bibtexurl: #
 citation: #
 ---
 
-with Sigrid Suetens, pre-registered as [here](https://osf.io/jntv6)
+Pre-registered as [here](https://osf.io/jntv6)
 
 We study whether other-regarding preferences of the majority population in Germany and the Netherlands depend on the ethnic background of others. 
 To do so, we ran large-scale controlled experiments among the general majority population in both countries. 
